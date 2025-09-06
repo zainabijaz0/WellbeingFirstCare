@@ -56,13 +56,12 @@ export function Footer() {
               <div className="rounded-full bg-white p-1.5 shadow ring-1 ring-black/5">
                 <img
                   src="/images/NDIS.png"
-                  alt="NDIS registered provider"
+                  alt="NDIS"
                   className="h-10 w-auto object-contain select-none"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
-              <span className="text-white/90 text-sm">Registered NDIS Provider</span>
             </div>
           </div>
 
