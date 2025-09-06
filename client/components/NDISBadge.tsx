@@ -28,7 +28,7 @@ export default function NDISBadge({
     >
       <img
         src="/images/NDIS.png"
-        alt="NDIS registered provider"
+        alt="NDIS"
         className={`${sizeClasses} h-auto drop-shadow-sm`}
         loading="lazy"
         decoding="async"
