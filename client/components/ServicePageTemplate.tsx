@@ -103,10 +103,11 @@ export function ServicePageTemplate({
                     : heroDescription;
                 })()}
               </motion.p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 min-w-0">
                 <Button
+                  asChild
                   size="lg"
-                  className="bg-white text-brand-teal hover:bg-gray-100 text-lg px-6 py-3 sm:px-8 sm:py-4 whitespace-nowrap"
+                  className="bg-white text-brand-teal hover:bg-gray-100 text-lg px-5 py-3 sm:px-7 sm:py-4 whitespace-nowrap"
                 >
                   <Link to="/contact">
                     Get In Contact <ArrowRight className="ml-2 w-5 h-5" />
@@ -116,7 +117,7 @@ export function ServicePageTemplate({
                   asChild
                   variant="outline"
                   size="lg"
-                  className="bg-transparent border-white text-white hover:bg-white hover:text-brand-teal text-lg px-8 py-4"
+                  className="bg-transparent border-white text-white hover:bg-white hover:text-brand-teal text-lg px-5 py-3 sm:px-7 sm:py-4 whitespace-nowrap"
                 >
                   <Link to="/services">View All Services</Link>
                 </Button>
