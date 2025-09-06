@@ -255,25 +255,32 @@ export function ServicePageTemplate({
         </div>
       </section>
 
-      {/* Service Details */}
-      <section className="py-20 bg-brand-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      {/* How to Access - Dynamic per service with image background */}
+      <section className="py-20 relative overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.35)), url("${heroImages[0]}")`,
+            backgroundSize: "cover",
+            backgroundPosition: "center 30%",
+          }}
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
             <h2 className="text-4xl font-bold text-white mb-4">
-              How to Access Our Assistance
+              How to Access {serviceName}
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Starting with our {serviceName.toLowerCase()} service is simple.
-              Contact us to discuss your needs, and we will create a
-              personalized care plan to support you or your loved one
-              effectively.
+            <p className="text-lg text-white/90 max-w-3xl mx-auto">
+              Getting started with {serviceName.toLowerCase()} is simple. Reach out
+              and we’ll tailor a plan around your goals and preferences.
             </p>
           </div>
 
           <div className="text-center">
             <Button
+              asChild
               size="lg"
-              className="bg-brand-teal hover:bg-brand-teal/90 text-lg px-8 py-4"
+              className="bg-white text-brand-teal hover:bg-gray-100 text-lg px-6 py-3 sm:px-8 sm:py-4 whitespace-nowrap"
             >
               <Link to="/contact">
                 Get In Contact <ArrowRight className="ml-2 w-5 h-5" />
