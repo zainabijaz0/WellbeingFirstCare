@@ -131,7 +131,7 @@ export function Header() {
                           <Link
                             to={item.href}
                             className="block px-4 py-3 text-sm text-brand-navy hover:bg-brand-light hover:text-brand-teal transition-colors duration-200"
-                            onClick={() => setIsServicesOpen(false)}
+                            onClick={handleNavClick}
                           >
                             View all services
                           </Link>
@@ -141,7 +141,7 @@ export function Header() {
                               key={subItem.name}
                               to={subItem.href}
                               className="block px-4 py-3 text-sm text-brand-navy hover:bg-brand-light hover:text-brand-teal transition-colors duration-200"
-                              onClick={() => setIsServicesOpen(false)}
+                              onClick={handleNavClick}
                             >
                               {subItem.name}
                             </Link>
@@ -220,7 +220,7 @@ export function Header() {
                           ? "text-brand-teal bg-gray-50"
                           : "text-brand-navy"
                       }`}
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={handleNavClick}
                     >
                       {item.name}
                     </Link>
@@ -232,7 +232,7 @@ export function Header() {
                             key={subItem.name}
                             to={subItem.href}
                             className="block px-3 py-2 text-sm text-brand-gray hover:text-brand-teal hover:bg-gray-50"
-                            onClick={() => setIsMenuOpen(false)}
+                            onClick={handleNavClick}
                           >
                             {subItem.name}
                           </Link>
@@ -246,7 +246,7 @@ export function Header() {
                     asChild
                     className="w-full bg-brand-teal hover:bg-brand-teal/90 text-white"
                   >
-                    <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+                    <Link to="/about" onClick={handleNavClick}>
                       Explore Us
                     </Link>
                   </Button>
