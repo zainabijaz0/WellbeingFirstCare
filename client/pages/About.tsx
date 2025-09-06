@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import NDISBadge from "@/components/NDISBadge";
+import ServiceCard from "@/components/ServiceCard";
 
 export default function About() {
   return (
