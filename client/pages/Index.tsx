@@ -54,6 +54,11 @@ export default function Index() {
       title: "Therapy That Feels Supportive",
       description: "Progress at your pace.",
     },
+    {
+      image: "/images/senior-woman-with-her-caregiver-outdoor.jpg",
+      title: "Personalized Support Services",
+      description: "Support tailored to your goals.",
+    },
   ];
 
   // Auto-rotate hero carousel; preserve scroll position across slide changes.
