@@ -330,6 +330,7 @@ export default function About() {
                               {review.name}
                             </p>
                             <p className="text-sm text-gray-600">Melbourne, Australia</p>
+                            <p className="text-xs text-brand-teal mt-1">Team: Kabir Awan • Mureed Awan • Arshad Mehmood</p>
                             {review.verified && (
                               <p className="text-sm text-brand-teal">
                                 ✓ Verified Client
