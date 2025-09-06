@@ -69,7 +69,7 @@ export default function Career() {
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 bg-fixed"
           style={{
             backgroundImage:
               'linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("/images/medium-shot-men-working-together-indoors.jpg")',

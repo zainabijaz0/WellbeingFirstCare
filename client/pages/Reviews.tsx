@@ -110,7 +110,7 @@ export default function Reviews() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-brand-navy text-white py-20">
+      <section className="relative bg-brand-navy text-white py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             What Our Clients Say

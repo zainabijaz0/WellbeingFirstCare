@@ -104,7 +104,7 @@ export function ServicePageTemplate({
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-white text-brand-teal hover:bg-gray-100 text-lg px-8 py-4"
+                  className="bg-white text-brand-teal hover:bg-gray-100 text-lg px-6 py-3 sm:px-8 sm:py-4 whitespace-nowrap"
                 >
                   <Link to="/contact">
                     Get In Contact <ArrowRight className="ml-2 w-5 h-5" />

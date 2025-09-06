@@ -51,7 +51,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 bg-fixed"
           style={{
             backgroundImage:
               'linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("/images/female-doctor-hospital.jpg")',
@@ -96,6 +96,7 @@ export default function Contact() {
                       Contact
                     </h3>
                     <p className="text-gray-600">+61 451 034 940</p>
+                    <p className="text-gray-600">+61 451 185 550</p>
                   </div>
                 </div>
 
@@ -273,7 +274,15 @@ export default function Contact() {
               variant="secondary"
               className="bg-white text-brand-teal hover:bg-gray-100"
             >
-              <a href="tel:+61451034940">Call Now: +61 451 034 940</a>
+              <a href="tel:+61451034940">Call: +61 451 034 940</a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="secondary"
+              className="bg-white text-brand-teal hover:bg-gray-100"
+            >
+              <a href="tel:+61451185550">Call: +61 451 185 550</a>
             </Button>
             <Button
               asChild

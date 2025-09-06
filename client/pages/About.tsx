@@ -20,7 +20,7 @@ export default function About() {
       {/* Hero Section with Parallax */}
       <section className="relative h-96 sm:h-[28rem] md:h-[32rem] flex items-center justify-center overflow-hidden">
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 bg-fixed"
           style={{
             backgroundImage:
               'linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("/images/medium-shot-smiley-disabled-man-work.jpg")',
@@ -329,6 +329,7 @@ export default function About() {
                             <p className="font-semibold text-brand-navy">
                               {review.name}
                             </p>
+                            <p className="text-sm text-gray-600">Melbourne, Australia</p>
                             {review.verified && (
                               <p className="text-sm text-brand-teal">
                                 ✓ Verified Client
