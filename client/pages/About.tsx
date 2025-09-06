@@ -36,6 +36,7 @@ export default function About() {
             empower individuals with disabilities.
           </p>
         </div>
+        <NDISBadge className="z-20" />
       </section>
 
       {/* Our Story */}

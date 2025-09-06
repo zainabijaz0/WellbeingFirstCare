@@ -81,6 +81,7 @@ export default function Career() {
             Join Our Team At Wellbeing First Care
           </h1>
         </div>
+        <NDISBadge className="z-20" />
       </section>
 
       {/* Career Information */}

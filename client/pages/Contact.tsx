@@ -61,6 +61,7 @@ export default function Contact() {
         <div className="relative z-10 text-center text-white">
           <h1 className="text-4xl md:text-5xl font-bold">Contact Us</h1>
         </div>
+        <NDISBadge className="z-20" />
       </section>
 
       {/* Contact Form Section */}

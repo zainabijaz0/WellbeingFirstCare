@@ -147,6 +147,7 @@ export default function Index() {
           </div>
         </div>
 
+        <NDISBadge className="z-20" />
         {/* Carousel Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
           {heroContent.map((_, index) => (
@@ -159,7 +160,6 @@ export default function Index() {
               onClick={() => setCurrentImageIndex(index)}
             />
           ))}
-          <NDISBadge position="bottom-right" size="md" className="z-10" />
         </div>
       </section>
 

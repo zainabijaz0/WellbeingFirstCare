@@ -50,7 +50,7 @@ export default function ServiceCard({
           decoding="async"
           referrerPolicy="no-referrer"
         />
-        <NDISBadge />
+        <NDISBadge position="top-right" size="md" />
 
         {/* Dark gradient overlay */}
         <div

@@ -119,7 +119,7 @@ export function ServicePageTemplate({
           </div>
         </div>
 
-        <NDISBadge position="bottom-right" size="md" className="z-10" />
+        <NDISBadge position="top-right" size="lg" className="z-20" />
         {/* Carousel Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
           {heroImages.map((_, index) => (
