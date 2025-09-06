@@ -109,7 +109,7 @@ export default function Contact() {
                       Email
                     </h3>
                     <p className="text-gray-600">
-                      info@wellbeingfirstcare.com.au
+                      info@wellbeingfirstcare.com
                     </p>
                   </div>
                 </div>
