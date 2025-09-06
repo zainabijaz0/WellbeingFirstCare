@@ -217,6 +217,7 @@ export default function Services() {
                         <p className="text-sm text-brand-teal">
                           {review.service}
                         </p>
+                        <p className="text-xs text-brand-teal mt-1">Team: Kabir Awan • Mureed Awan • Arshad Mehmood</p>
                       </div>
                     </CardContent>
                   </Card>
