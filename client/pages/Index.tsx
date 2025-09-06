@@ -73,7 +73,7 @@ export default function Index() {
             />
           ))}
           {/* Gradient overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/45 to-transparent" />
         </div>
 
         {/* Hero Content - Left Aligned */}
@@ -118,9 +118,13 @@ export default function Index() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.4, delay: 0.05 }}
-                  className="text-base md:text-lg mb-6 opacity-90 leading-relaxed max-w-md"
+                  className="text-sm md:text-base mb-4 opacity-95 leading-relaxed max-w-sm"
                 >
-                  {heroContent[currentImageIndex].description}
+                  {(() => {
+                    const desc = heroContent[currentImageIndex].description;
+                    const max = 70;
+                    return desc.length > max ? desc.slice(0, max) + "…" : desc;
+                  })()}
                 </motion.p>
               </AnimatePresence>
               <div className="flex flex-col sm:flex-row gap-4">

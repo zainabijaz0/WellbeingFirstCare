@@ -18,6 +18,8 @@ type Props = {
   className?: string;
   revealOnHover?: boolean; // if false, details are always visible
   fullWidth?: boolean; // if true, card expands to fill its container (for grids)
+  ndisPosition?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
+  ndisSize?: "sm" | "md" | "lg";
 };
 
 export default function ServiceCard({
@@ -25,6 +27,8 @@ export default function ServiceCard({
   className,
   revealOnHover = true,
   fullWidth = false,
+  ndisPosition = "top-right",
+  ndisSize = "md",
 }: Props) {
   const Icon = item.icon;
   const reveal = revealOnHover;
@@ -50,7 +54,7 @@ export default function ServiceCard({
           decoding="async"
           referrerPolicy="no-referrer"
         />
-        <NDISBadge position="top-right" size="md" />
+        <NDISBadge position={ndisPosition} size={ndisSize} />
 
         {/* Dark gradient overlay */}
         <div

@@ -92,9 +92,14 @@ export function ServicePageTemplate({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.4, delay: 0.05 }}
-                className="text-base md:text-lg mb-6 opacity-90 leading-relaxed max-w-lg"
+                className="text-sm md:text-base mb-4 opacity-95 leading-relaxed max-w-md"
               >
-                {heroDescription}
+                {(() => {
+                  const max = 90;
+                  return heroDescription.length > max
+                    ? heroDescription.slice(0, max) + "…"
+                    : heroDescription;
+                })()}
               </motion.p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button

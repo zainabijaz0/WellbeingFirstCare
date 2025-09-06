@@ -48,10 +48,22 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Logo variant="white" showText={false} size="lg" className="mb-4" />
-            <p className="text-gray-300 text-sm leading-relaxed mb-4">
+            <p className="text-gray-100 text-sm leading-relaxed mb-4">
               We improve lives for individuals with disabilities through
               compassionate, comprehensive support.
             </p>
+            <div className="mt-3 inline-flex items-center gap-3">
+              <div className="rounded-full bg-white p-1.5 shadow ring-1 ring-black/5">
+                <img
+                  src="/images/NDIS.png"
+                  alt="NDIS registered provider"
+                  className="h-10 w-auto object-contain select-none"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <span className="text-white/90 text-sm">Registered NDIS Provider</span>
+            </div>
           </div>
 
           {/* Quick Links */}
