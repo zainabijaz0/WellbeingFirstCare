@@ -265,6 +265,7 @@ export default function Reviews() {
                             <p className="text-xs text-gray-500">
                               {review.date}
                             </p>
+                            <p className="text-xs text-brand-teal mt-1">Team: Kabir Awan • Mureed Awan • Arshad Mehmood</p>
                           </div>
                           <div className="text-right">
                             <p className="text-sm font-medium text-brand-teal">
