@@ -122,7 +122,7 @@ export default function Contact() {
                     <h3 className="font-semibold text-brand-navy mb-1">
                       Location
                     </h3>
-                    <p className="text-gray-600">Serving Australia-wide</p>
+                    <p className="text-gray-600">Melbourne</p>
                   </div>
                 </div>
 
