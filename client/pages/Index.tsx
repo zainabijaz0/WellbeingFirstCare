@@ -554,6 +554,7 @@ export default function Index() {
                             </p>
                           </div>
                         </div>
+                        <p className="mt-2 text-xs text-brand-teal">Team: Kabir Awan • Mureed Awan • Arshad Mehmood</p>
                       </div>
                     </CardContent>
                   </Card>
