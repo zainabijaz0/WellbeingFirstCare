@@ -46,6 +46,13 @@ export function Header() {
 
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
+    setIsServicesOpen(false);
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    setTimeout(() => window.scrollTo(0, 0), 0);
+  };
+
   useEffect(() => {
     const onDocClick = (e: MouseEvent) => {
       if (
