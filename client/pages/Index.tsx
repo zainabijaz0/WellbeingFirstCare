@@ -143,7 +143,7 @@ export default function Index() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="bg-transparent border-white text-white hover:bg-white hover:text-brand-teal text-lg px-8 py-4 transition-transform duration-300 hover:scale-105"
+                  className="bg-transparent border-white text-white hover:bg-white hover:text-brand-teal text-lg px-6 py-3 sm:px-8 sm:py-4 transition-transform duration-300 hover:scale-105 whitespace-nowrap"
                 >
                   <Link to="/contact">Get In Touch</Link>
                 </Button>
