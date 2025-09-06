@@ -364,7 +364,7 @@ export default function Career() {
               asChild
               size="lg"
               variant="outline"
-              className="bg-transparent border-white text-white hover:bg-white hover:text-brand-navy"
+              className="bg-white/10 backdrop-blur-sm border-white/70 text-white hover:bg-white hover:text-brand-navy ring-1 ring-white/50"
             >
               <a href="mailto:info@wellbeingfirstcare.com">
                 Email HR Team
