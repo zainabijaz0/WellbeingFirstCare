@@ -133,7 +133,7 @@ export default function Index() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white text-brand-teal hover:bg-gray-100 text-lg px-8 py-4 transition-transform duration-300 hover:scale-105"
+                  className="bg-white text-brand-teal hover:bg-gray-100 text-lg px-6 py-3 sm:px-8 sm:py-4 transition-transform duration-300 hover:scale-105 whitespace-nowrap"
                 >
                   <Link to="/services">
                     Explore Our Services <ArrowRight className="ml-2 w-5 h-5" />
