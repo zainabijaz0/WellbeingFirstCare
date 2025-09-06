@@ -25,24 +25,34 @@ export default function Index() {
 
   const heroContent = [
     {
-      image: "/images/female-nurse-taking-care-elderly-person.jpg",
-      title: "Compassionate Care For Every Individual",
-      description: "Person‑centred care that puts you first.",
+      image: "/images/children/happy-child-with-down-syndrome-playing-outside.jpg",
+      title: "Care That Celebrates Every Child",
+      description: "Joyful, inclusive support.",
     },
     {
-      image: "/images/senior-woman-with-her-caregiver-outdoor.jpg",
-      title: "Personalized Support Services",
-      description: "Support tailored to your goals.",
+      image: "/images/children/mother-playing-with-her-autistic-son-using-toys.jpg",
+      title: "Supporting Families With Heart",
+      description: "Calm, consistent care.",
     },
     {
-      image: "/images/medium-shot-smiley-disabled-man-work.jpg",
-      title: "Empowering Independence Together",
-      description: "Confidence, skills and connection.",
+      image: "/images/children/medical-worker-taking-girl-temperature.jpg",
+      title: "Trusted Clinical Support",
+      description: "Safe, professional help.",
     },
     {
-      image: "/images/doctor-talking-senior-man-indoors.jpg",
-      title: "Quality Care You Can Trust",
-      description: "Reliable support you can trust.",
+      image: "/images/children/lifestyle-child-wheelchair.jpg",
+      title: "Inclusive Support For Independence",
+      description: "Confidence and mobility.",
+    },
+    {
+      image: "/images/children/happy-woman-girl-with-down-syndrome-painting-each-other-s-faces.jpg",
+      title: "Creativity, Connection, Growth",
+      description: "Skills through play.",
+    },
+    {
+      image: "/images/children/child-doing-therapy-session-with-psychologist.jpg",
+      title: "Therapy That Feels Supportive",
+      description: "Progress at your pace.",
     },
   ];
 
@@ -196,7 +206,7 @@ export default function Index() {
             </div>
             <div className="relative">
               <img
-                src="/images/contented-senior-patient-with-kind-doctor-nursing-home-time-together.jpg"
+                src="/images/children/happy-child-with-down-syndrome-playing-outside.jpg"
                 alt="Caring support worker helping elderly person"
                 className="rounded-lg shadow-xl"
               />
@@ -226,7 +236,7 @@ export default function Index() {
                 const base = [
                   {
                     title: "Autism Support",
-                    image: "/images/female-doctor-hospital.jpg",
+                    image: "/images/children/child-doing-therapy-session-with-psychologist.jpg",
                     description:
                       "Specialised autism support focusing on communication, routines, sensory needs and independence.",
                     href: "/services",
@@ -234,7 +244,7 @@ export default function Index() {
                   {
                     title: "Personal Care",
                     image:
-                      "/images/female-caretaker-her-client-s-house-taking-care-elderly-person.jpg",
+                      "/images/children/happy-woman-girl-with-down-syndrome-painting-each-other-s-faces.jpg",
                     description:
                       "Compassionate personal care services tailored to individual needs.",
                     href: "/services/personal-care",
@@ -242,7 +252,7 @@ export default function Index() {
                   {
                     title: "Assistance with Daily Living",
                     image:
-                      "/images/medium-shot-men-working-together-indoors.jpg",
+                      "/images/children/lifestyle-child-wheelchair.jpg",
                     description:
                       "Supporting independence through daily living assistance.",
                     href: "/services/daily-living",
@@ -250,7 +260,7 @@ export default function Index() {
                   {
                     title: "Respite Care",
                     image:
-                      "/images/young-woman-doing-sport-exercises-sunrise-beach-morning.jpg",
+                      "/images/children/mother-playing-with-her-autistic-son-using-toys.jpg",
                     description:
                       "Quality respite care to give families peace of mind.",
                     href: "/services/respite-care",
@@ -258,7 +268,7 @@ export default function Index() {
                   {
                     title: "Supported Independent Living (SIL)",
                     image:
-                      "/images/wellness-exercise-health-lifestyle-nutrition-concept.jpg",
+                      "/images/children/doctor-doing-their-work-pediatrics-office.jpg",
                     description:
                       "Empowering independent living with the right support.",
                     href: "/services/supported-living",
@@ -307,7 +317,7 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
-                src="/images/smiley-man-woman-talking.jpg"
+                src="/images/children/doctor-doing-their-work-pediatrics-office2.jpg"
                 alt="Support workers with clients"
                 className="rounded-lg shadow-xl"
               />
