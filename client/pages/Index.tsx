@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion, AnimatePresence } from "framer-motion";
+import { useParallax } from "@/hooks/use-parallax";
 import NDISBadge from "@/components/NDISBadge";
 import HorizontalScroller from "@/components/HorizontalScroller";
 import ServiceCard from "@/components/ServiceCard";
@@ -20,6 +21,7 @@ import ServiceCard from "@/components/ServiceCard";
 export default function Index() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const parallaxRef = useParallax(0.2);
 
   const heroContent = [
     {
@@ -59,7 +61,7 @@ export default function Index() {
       {/* Hero Section with Left-aligned Text and Image Carousel */}
       <section className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen flex items-center overflow-hidden">
         {/* Background Images Carousel */}
-        <div className="absolute inset-0">
+        <div ref={parallaxRef as any} className="absolute inset-0 will-change-transform">
           {heroContent.map((content, index) => (
             <img
               key={index}
