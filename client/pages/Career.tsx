@@ -356,7 +356,7 @@ export default function Career() {
             <Button
               asChild
               size="lg"
-              className="bg-brand-teal hover:bg-brand-teal/90"
+              className="bg-brand-teal hover:bg-brand-teal/90 shadow ring-1 ring-white/30"
             >
               <a href="#application-form">Apply Now</a>
             </Button>
