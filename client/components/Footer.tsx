@@ -47,7 +47,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <img src="/images/footer-logo.png" alt="Wellbeing First Care" className="h-16 md:h-20 w-auto mb-4 select-none" loading="lazy" decoding="async" />
+            <img
+              src="/images/footer-logo.png"
+              alt="Wellbeing First Care"
+              className="h-16 md:h-20 w-auto mb-4 select-none"
+              loading="lazy"
+              decoding="async"
+            />
             <p className="text-gray-100 text-sm leading-relaxed mb-4">
               We improve lives for individuals with disabilities through
               compassionate, comprehensive support.

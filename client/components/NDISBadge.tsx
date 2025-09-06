@@ -11,8 +11,7 @@ export default function NDISBadge({
   size = "lg",
   position = "top-right",
 }: NDISBadgeProps) {
-  const sizeClasses =
-    size === "lg" ? "w-20" : size === "sm" ? "w-12" : "w-14";
+  const sizeClasses = size === "lg" ? "w-20" : size === "sm" ? "w-12" : "w-14";
   const posClasses =
     position === "top-left"
       ? "top-2 left-2"

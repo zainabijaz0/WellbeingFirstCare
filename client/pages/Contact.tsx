@@ -108,9 +108,7 @@ export default function Contact() {
                     <h3 className="font-semibold text-brand-navy mb-1">
                       Email
                     </h3>
-                    <p className="text-gray-600">
-                      info@wellbeingfirstcare.com
-                    </p>
+                    <p className="text-gray-600">info@wellbeingfirstcare.com</p>
                   </div>
                 </div>
 

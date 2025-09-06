@@ -25,12 +25,14 @@ export default function Index() {
 
   const heroContent = [
     {
-      image: "/images/children/happy-child-with-down-syndrome-playing-outside.jpg",
+      image:
+        "/images/children/happy-child-with-down-syndrome-playing-outside.jpg",
       title: "Care That Celebrates Every Child",
       description: "Joyful, inclusive support.",
     },
     {
-      image: "/images/children/mother-playing-with-her-autistic-son-using-toys.jpg",
+      image:
+        "/images/children/mother-playing-with-her-autistic-son-using-toys.jpg",
       title: "Supporting Families With Heart",
       description: "Calm, consistent care.",
     },
@@ -45,12 +47,14 @@ export default function Index() {
       description: "Confidence and mobility.",
     },
     {
-      image: "/images/children/happy-woman-girl-with-down-syndrome-painting-each-other-s-faces.jpg",
+      image:
+        "/images/children/happy-woman-girl-with-down-syndrome-painting-each-other-s-faces.jpg",
       title: "Creativity, Connection, Growth",
       description: "Skills through play.",
     },
     {
-      image: "/images/children/child-doing-therapy-session-with-psychologist.jpg",
+      image:
+        "/images/children/child-doing-therapy-session-with-psychologist.jpg",
       title: "Therapy That Feels Supportive",
       description: "Progress at your pace.",
     },
@@ -76,7 +80,10 @@ export default function Index() {
       {/* Hero Section with Left-aligned Text and Image Carousel */}
       <section className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen flex items-center overflow-hidden pt-20 md:pt-24">
         {/* Background Images Carousel */}
-        <div ref={parallaxRef as any} className="absolute inset-0 will-change-transform">
+        <div
+          ref={parallaxRef as any}
+          className="absolute inset-0 will-change-transform"
+        >
           {heroContent.map((content, index) => (
             <img
               key={index}
@@ -241,7 +248,8 @@ export default function Index() {
                 const base = [
                   {
                     title: "Autism Support",
-                    image: "/images/children/child-doing-therapy-session-with-psychologist.jpg",
+                    image:
+                      "/images/children/child-doing-therapy-session-with-psychologist.jpg",
                     description:
                       "Specialised autism support focusing on communication, routines, sensory needs and independence.",
                     href: "/services",
@@ -256,8 +264,7 @@ export default function Index() {
                   },
                   {
                     title: "Assistance with Daily Living",
-                    image:
-                      "/images/children/lifestyle-child-wheelchair.jpg",
+                    image: "/images/children/lifestyle-child-wheelchair.jpg",
                     description:
                       "Supporting independence through daily living assistance.",
                     href: "/services/daily-living",
@@ -554,7 +561,9 @@ export default function Index() {
                             </p>
                           </div>
                         </div>
-                        <p className="mt-2 text-xs text-brand-teal">Team: Kabir Awan • Mureed Awan • Arshad Mehmood</p>
+                        <p className="mt-2 text-xs text-brand-teal">
+                          Team: Kabir Awan • Mureed Awan • Arshad Mehmood
+                        </p>
                       </div>
                     </CardContent>
                   </Card>

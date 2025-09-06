@@ -111,11 +111,15 @@ export default function Reviews() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-fixed" style={{
-          backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.35)), url("/images/doctor-with-stethoscope-hands-hospital-background.jpg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 20%'
-        }} />
+        <div
+          className="absolute inset-0 bg-fixed"
+          style={{
+            backgroundImage:
+              'linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.35)), url("/images/doctor-with-stethoscope-hands-hospital-background.jpg")',
+            backgroundSize: "cover",
+            backgroundPosition: "center 20%",
+          }}
+        />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             What Our Clients Say
@@ -265,7 +269,9 @@ export default function Reviews() {
                             <p className="text-xs text-gray-500">
                               {review.date}
                             </p>
-                            <p className="text-xs text-brand-teal mt-1">Team: Kabir Awan • Mureed Awan • Arshad Mehmood</p>
+                            <p className="text-xs text-brand-teal mt-1">
+                              Team: Kabir Awan • Mureed Awan • Arshad Mehmood
+                            </p>
                           </div>
                           <div className="text-right">
                             <p className="text-sm font-medium text-brand-teal">

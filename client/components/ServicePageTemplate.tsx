@@ -56,7 +56,10 @@ export function ServicePageTemplate({
       {/* Hero Section with Left-aligned Text and Image Carousel */}
       <section className="relative h-screen flex items-center overflow-hidden pt-20 md:pt-24">
         {/* Background Images Carousel */}
-        <div ref={parallaxRef as any} className="absolute inset-0 will-change-transform">
+        <div
+          ref={parallaxRef as any}
+          className="absolute inset-0 will-change-transform"
+        >
           {heroImages.map((image, index) => (
             <div
               key={index}
@@ -266,8 +269,8 @@ export function ServicePageTemplate({
               How to Access {serviceName}
             </h2>
             <p className="text-lg text-white/90 max-w-3xl mx-auto">
-              Getting started with {serviceName.toLowerCase()} is simple. Reach out
-              and we’ll tailor a plan around your goals and preferences.
+              Getting started with {serviceName.toLowerCase()} is simple. Reach
+              out and we’ll tailor a plan around your goals and preferences.
             </p>
           </div>
 

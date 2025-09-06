@@ -211,16 +211,43 @@ export default function About() {
       <section className="py-12 sm:py-16 md:py-20 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-navy">Our Services</h2>
-            <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">Explore our most in‑demand supports.</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-navy">
+              Our Services
+            </h2>
+            <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
+              Explore our most in‑demand supports.
+            </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
-              { title: "Respite Care", image: "/images/children/mother-playing-with-her-autistic-son-using-toys.jpg", description: "Quality respite care for families.", href: "/services/respite-care" },
-              { title: "Individual Support", image: "/images/children/lifestyle-child-wheelchair.jpg", description: "Personalised one‑on‑one support.", href: "/services/daily-living" },
-              { title: "Specialist Disability Accommodation (SDA)", image: "/images/children/doctor-doing-their-work-pediatrics-office.jpg", description: "Purpose‑built accessible housing.", href: "/services/disability-accommodation" },
+              {
+                title: "Respite Care",
+                image:
+                  "/images/children/mother-playing-with-her-autistic-son-using-toys.jpg",
+                description: "Quality respite care for families.",
+                href: "/services/respite-care",
+              },
+              {
+                title: "Individual Support",
+                image: "/images/children/lifestyle-child-wheelchair.jpg",
+                description: "Personalised one‑on‑one support.",
+                href: "/services/daily-living",
+              },
+              {
+                title: "Specialist Disability Accommodation (SDA)",
+                image:
+                  "/images/children/doctor-doing-their-work-pediatrics-office.jpg",
+                description: "Purpose‑built accessible housing.",
+                href: "/services/disability-accommodation",
+              },
             ].map((s, i) => (
-              <ServiceCard key={i} item={s} fullWidth ndisPosition="bottom-left" ndisSize="md" />
+              <ServiceCard
+                key={i}
+                item={s}
+                fullWidth
+                ndisPosition="bottom-left"
+                ndisSize="md"
+              />
             ))}
           </div>
         </div>
@@ -329,8 +356,12 @@ export default function About() {
                             <p className="font-semibold text-brand-navy">
                               {review.name}
                             </p>
-                            <p className="text-sm text-gray-600">Melbourne, Australia</p>
-                            <p className="text-xs text-brand-teal mt-1">Team: Kabir Awan • Mureed Awan • Arshad Mehmood</p>
+                            <p className="text-sm text-gray-600">
+                              Melbourne, Australia
+                            </p>
+                            <p className="text-xs text-brand-teal mt-1">
+                              Team: Kabir Awan • Mureed Awan • Arshad Mehmood
+                            </p>
                             {review.verified && (
                               <p className="text-sm text-brand-teal">
                                 ✓ Verified Client
