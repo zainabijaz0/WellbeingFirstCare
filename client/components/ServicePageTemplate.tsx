@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import NDISBadge from "@/components/NDISBadge";
 import { motion, AnimatePresence } from "framer-motion";
+import { useParallax } from "@/hooks/use-parallax";
 
 interface ServicePageProps {
   serviceName: string;
@@ -38,6 +39,7 @@ export function ServicePageTemplate({
 }: ServicePageProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const parallaxRef = useParallax(0.2);
 
   // Auto-rotate carousel and preserve scroll position across slide changes.
   useEffect(() => {
@@ -54,7 +56,7 @@ export function ServicePageTemplate({
       {/* Hero Section with Left-aligned Text and Image Carousel */}
       <section className="relative h-screen flex items-center overflow-hidden">
         {/* Background Images Carousel */}
-        <div className="absolute inset-0">
+        <div ref={parallaxRef as any} className="absolute inset-0 will-change-transform">
           {heroImages.map((image, index) => (
             <div
               key={index}
