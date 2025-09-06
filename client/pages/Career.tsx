@@ -74,7 +74,7 @@ export default function Career() {
             backgroundImage:
               'linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("/images/medium-shot-men-working-together-indoors.jpg")',
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center 20%",
           }}
         />
         <div className="relative z-10 text-center text-white">
@@ -345,7 +345,7 @@ export default function Career() {
           style={{
             backgroundImage: 'url("/images/female-doctor-hospital.jpg")',
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center 20%",
           }}
         />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
