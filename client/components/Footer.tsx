@@ -128,7 +128,7 @@ export function Footer() {
               <div className="flex items-center gap-2 text-sm">
                 <Mail className="w-4 h-4 text-brand-teal" />
                 <span className="text-gray-300">
-                  info@wellbeingfirstcare.com.au
+                  info@wellbeingfirstcare.com
                 </span>
               </div>
 
