@@ -216,9 +216,9 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
-              { title: "Respite Care", image: "/images/young-woman-doing-sport-exercises-sunrise-beach-morning.jpg", description: "Quality respite care for families.", href: "/services/respite-care" },
-              { title: "Individual Support", image: "/images/medium-shot-men-working-together-indoors.jpg", description: "Personalised one‑on‑one support.", href: "/services/daily-living" },
-              { title: "Specialist Disability Accommodation (SDA)", image: "/images/doctor-with-stethoscope-hands-hospital-background.jpg", description: "Purpose‑built accessible housing.", href: "/services/disability-accommodation" },
+              { title: "Respite Care", image: "/images/children/mother-playing-with-her-autistic-son-using-toys.jpg", description: "Quality respite care for families.", href: "/services/respite-care" },
+              { title: "Individual Support", image: "/images/children/lifestyle-child-wheelchair.jpg", description: "Personalised one‑on‑one support.", href: "/services/daily-living" },
+              { title: "Specialist Disability Accommodation (SDA)", image: "/images/children/doctor-doing-their-work-pediatrics-office.jpg", description: "Purpose‑built accessible housing.", href: "/services/disability-accommodation" },
             ].map((s, i) => (
               <ServiceCard key={i} item={s} fullWidth ndisPosition="bottom-left" ndisSize="md" />
             ))}
