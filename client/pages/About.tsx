@@ -206,74 +206,20 @@ export default function About() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-brand-navy relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage:
-              'url("/images/old-patient-suffering-from-parkinson.jpg")',
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-              Wellbeing First Care
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-              Years of experience providing compassionate, professional
-              disability support services.
-            </p>
+      {/* Our Services (clickable like homepage) */}
+      <section className="py-12 sm:py-16 md:py-20 bg-brand-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-navy">Our Services</h2>
+            <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">Explore our most in‑demand supports.</p>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
-              {
-                image: "/images/senior-woman-with-her-caregiver-outdoor.jpg",
-                title: "Respite Care",
-                description:
-                  "Providing temporary relief and quality care for families.",
-              },
-              {
-                image: "/images/medium-shot-smiley-disabled-man-work.jpg",
-                title: "Individual Support",
-                description:
-                  "Personalized one-on-one support tailored to individual needs.",
-              },
-              {
-                image:
-                  "/images/doctor-with-stethoscope-hands-hospital-background.jpg",
-                title: "Specialist Disability Accommodation (SDA)",
-                description:
-                  "Purpose-built housing designed for people with extreme functional impairment.",
-              },
-            ].map((service, index) => (
-              <Card
-                key={index}
-                className="bg-white/10 border-white/20 text-white overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-              >
-                <div className="aspect-video overflow-hidden relative">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                    referrerPolicy="no-referrer"
-                  />
-                  <NDISBadge />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {service.description}
-                  </p>
-                </CardContent>
-              </Card>
+              { title: "Respite Care", image: "/images/young-woman-doing-sport-exercises-sunrise-beach-morning.jpg", description: "Quality respite care for families.", href: "/services/respite-care" },
+              { title: "Individual Support", image: "/images/medium-shot-men-working-together-indoors.jpg", description: "Personalised one‑on‑one support.", href: "/services/daily-living" },
+              { title: "Specialist Disability Accommodation (SDA)", image: "/images/doctor-with-stethoscope-hands-hospital-background.jpg", description: "Purpose‑built accessible housing.", href: "/services/disability-accommodation" },
+            ].map((s, i) => (
+              <ServiceCard key={i} item={s} fullWidth ndisPosition="bottom-left" ndisSize="md" />
             ))}
           </div>
         </div>
