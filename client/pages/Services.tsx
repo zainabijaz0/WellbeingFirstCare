@@ -213,6 +213,7 @@ export default function Services() {
                         <p className="font-semibold text-brand-navy">
                           {review.name}
                         </p>
+                        <p className="text-sm text-gray-600">Melbourne, Australia</p>
                         <p className="text-sm text-brand-teal">
                           {review.service}
                         </p>
