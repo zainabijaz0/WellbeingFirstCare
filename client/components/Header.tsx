@@ -169,7 +169,7 @@ export function Header() {
               <div className="rounded-full bg-white p-1.5 shadow ring-1 ring-black/5">
                 <img
                   src="/images/NDIS.png"
-                  alt="NDIS registered provider"
+                  alt="NDIS"
                   className="h-10 w-auto object-contain select-none"
                   loading="lazy"
                   decoding="async"
@@ -247,7 +247,7 @@ export function Header() {
                     <div className="rounded-full bg-white p-1.5 shadow ring-1 ring-black/5">
                       <img
                         src="/images/NDIS.png"
-                        alt="NDIS registered provider"
+                        alt="NDIS"
                         className="h-9 w-auto object-contain select-none"
                         loading="lazy"
                         decoding="async"
