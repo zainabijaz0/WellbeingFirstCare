@@ -59,7 +59,7 @@ export default function Index() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Left-aligned Text and Image Carousel */}
-      <section className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen flex items-center overflow-hidden pt-20 md:pt-24">
         {/* Background Images Carousel */}
         <div ref={parallaxRef as any} className="absolute inset-0 will-change-transform">
           {heroContent.map((content, index) => (
@@ -67,9 +67,10 @@ export default function Index() {
               key={index}
               src={content.image}
               alt=""
-              className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 select-none ${
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 select-none ${
                 index === currentImageIndex ? "opacity-100" : "opacity-0"
               }`}
+              style={{ objectPosition: "center 20%" }}
               loading={index === currentImageIndex ? "eager" : "lazy"}
               decoding="async"
             />

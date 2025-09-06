@@ -110,8 +110,13 @@ export default function Reviews() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-brand-navy text-white py-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-fixed" style={{
+          backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.35)), url("/images/doctor-with-stethoscope-hands-hospital-background.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 20%'
+        }} />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             What Our Clients Say
           </h1>

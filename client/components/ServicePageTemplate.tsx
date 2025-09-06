@@ -54,7 +54,7 @@ export function ServicePageTemplate({
   return (
     <div className="min-h-screen">
       {/* Hero Section with Left-aligned Text and Image Carousel */}
-      <section className="relative h-screen flex items-center overflow-hidden">
+      <section className="relative h-screen flex items-center overflow-hidden pt-20 md:pt-24">
         {/* Background Images Carousel */}
         <div ref={parallaxRef as any} className="absolute inset-0 will-change-transform">
           {heroImages.map((image, index) => (
@@ -66,7 +66,7 @@ export function ServicePageTemplate({
               style={{
                 backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("${image}")`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "center 20%",
               }}
             />
           ))}
