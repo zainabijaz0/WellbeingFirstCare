@@ -25,7 +25,7 @@ export default function About() {
             backgroundImage:
               'linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("/images/medium-shot-smiley-disabled-man-work.jpg")',
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center 20%",
           }}
         />
         <div className="relative z-10 text-center text-white px-4">
@@ -364,7 +364,7 @@ export default function About() {
           style={{
             backgroundImage: 'url("/images/female-doctor-hospital.jpg")',
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center 20%",
             transform: `translateY(${scrollY * 0.1}px)`,
           }}
         />
