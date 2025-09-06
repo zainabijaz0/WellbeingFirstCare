@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import NDISBadge from "@/components/NDISBadge";
+import ServiceCard from "@/components/ServiceCard";
 
 export default function About() {
   return (
@@ -19,12 +20,12 @@ export default function About() {
       {/* Hero Section with Parallax */}
       <section className="relative h-96 sm:h-[28rem] md:h-[32rem] flex items-center justify-center overflow-hidden">
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 bg-fixed"
           style={{
             backgroundImage:
               'linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("/images/medium-shot-smiley-disabled-man-work.jpg")',
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center 20%",
           }}
         />
         <div className="relative z-10 text-center text-white px-4">
@@ -36,6 +37,7 @@ export default function About() {
             empower individuals with disabilities.
           </p>
         </div>
+        <NDISBadge className="z-20" />
       </section>
 
       {/* Our Story */}
@@ -205,74 +207,47 @@ export default function About() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-brand-navy relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage:
-              'url("/images/old-patient-suffering-from-parkinson.jpg")',
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-              Wellbeing First Care
+      {/* Our Services (clickable like homepage) */}
+      <section className="py-12 sm:py-16 md:py-20 bg-brand-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-navy">
+              Our Services
             </h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-              Years of experience providing compassionate, professional
-              disability support services.
+            <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
+              Explore our most in‑demand supports.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
               {
-                image: "/images/senior-woman-with-her-caregiver-outdoor.jpg",
                 title: "Respite Care",
-                description:
-                  "Providing temporary relief and quality care for families.",
-              },
-              {
-                image: "/images/medium-shot-smiley-disabled-man-work.jpg",
-                title: "Individual Support",
-                description:
-                  "Personalized one-on-one support tailored to individual needs.",
-              },
-              {
                 image:
-                  "/images/doctor-with-stethoscope-hands-hospital-background.jpg",
-                title: "Specialist Disability Accommodation (SDA)",
-                description:
-                  "Purpose-built housing designed for people with extreme functional impairment.",
+                  "/images/children/mother-playing-with-her-autistic-son-using-toys.jpg",
+                description: "Quality respite care for families.",
+                href: "/services/respite-care",
               },
-            ].map((service, index) => (
-              <Card
-                key={index}
-                className="bg-white/10 border-white/20 text-white overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-              >
-                <div className="aspect-video overflow-hidden relative">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                    referrerPolicy="no-referrer"
-                  />
-                  <NDISBadge />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {service.description}
-                  </p>
-                </CardContent>
-              </Card>
+              {
+                title: "Individual Support",
+                image: "/images/children/lifestyle-child-wheelchair.jpg",
+                description: "Personalised one‑on‑one support.",
+                href: "/services/daily-living",
+              },
+              {
+                title: "Specialist Disability Accommodation (SDA)",
+                image:
+                  "/images/children/doctor-doing-their-work-pediatrics-office.jpg",
+                description: "Purpose‑built accessible housing.",
+                href: "/services/disability-accommodation",
+              },
+            ].map((s, i) => (
+              <ServiceCard
+                key={i}
+                item={s}
+                fullWidth
+                ndisPosition="bottom-left"
+                ndisSize="md"
+              />
             ))}
           </div>
         </div>
@@ -316,6 +291,41 @@ export default function About() {
                       "Consistently professional care. Mureed Awan ensured smooth service delivery every time.",
                     verified: true,
                   },
+                  {
+                    name: "David Chen",
+                    rating: 5,
+                    review:
+                      "Our support plan was tailored perfectly. Communication is excellent and carers are always on time.",
+                    verified: true,
+                  },
+                  {
+                    name: "Sarah Mitchell",
+                    rating: 5,
+                    review:
+                      "Compassionate workers who really listen. My daughter looks forward to every visit.",
+                    verified: true,
+                  },
+                  {
+                    name: "Michael Roberts",
+                    rating: 5,
+                    review:
+                      "Transition to SIL was smooth and respectful. The team handled everything professionally.",
+                    verified: true,
+                  },
+                  {
+                    name: "Emma Thompson",
+                    rating: 5,
+                    review:
+                      "Responsive coordinators and flexible scheduling. Great experience overall.",
+                    verified: true,
+                  },
+                  {
+                    name: "Maria Rodriguez",
+                    rating: 5,
+                    review:
+                      "Reliable transport and friendly drivers. Has made community access so much easier.",
+                    verified: true,
+                  },
                 ];
                 const list = [...base, ...base];
                 return list.map((review, index) => (
@@ -345,6 +355,12 @@ export default function About() {
                           <div>
                             <p className="font-semibold text-brand-navy">
                               {review.name}
+                            </p>
+                            <p className="text-sm text-gray-600">
+                              Melbourne, Australia
+                            </p>
+                            <p className="text-xs text-brand-teal mt-1">
+                              Team: Kabir Awan • Mureed Awan • Arshad Mehmood
                             </p>
                             {review.verified && (
                               <p className="text-sm text-brand-teal">
@@ -380,7 +396,7 @@ export default function About() {
           style={{
             backgroundImage: 'url("/images/female-doctor-hospital.jpg")',
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center 20%",
             transform: `translateY(${scrollY * 0.1}px)`,
           }}
         />

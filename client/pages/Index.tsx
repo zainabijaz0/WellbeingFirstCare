@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion, AnimatePresence } from "framer-motion";
+import { useParallax } from "@/hooks/use-parallax";
 import NDISBadge from "@/components/NDISBadge";
 import HorizontalScroller from "@/components/HorizontalScroller";
 import ServiceCard from "@/components/ServiceCard";
@@ -20,27 +21,47 @@ import ServiceCard from "@/components/ServiceCard";
 export default function Index() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const parallaxRef = useParallax(0.2);
 
   const heroContent = [
     {
-      image: "/images/female-nurse-taking-care-elderly-person.jpg",
-      title: "Compassionate Care For Every Individual",
-      description: "Person‑centred care that puts you first.",
+      image:
+        "/images/children/happy-child-with-down-syndrome-playing-outside.jpg",
+      title: "Care That Celebrates Every Child",
+      description: "Joyful, inclusive support.",
+    },
+    {
+      image:
+        "/images/children/mother-playing-with-her-autistic-son-using-toys.jpg",
+      title: "Supporting Families With Heart",
+      description: "Calm, consistent care.",
+    },
+    {
+      image: "/images/children/medical-worker-taking-girl-temperature.jpg",
+      title: "Trusted Clinical Support",
+      description: "Safe, professional help.",
+    },
+    {
+      image: "/images/children/lifestyle-child-wheelchair.jpg",
+      title: "Inclusive Support For Independence",
+      description: "Confidence and mobility.",
+    },
+    {
+      image:
+        "/images/children/happy-woman-girl-with-down-syndrome-painting-each-other-s-faces.jpg",
+      title: "Creativity, Connection, Growth",
+      description: "Skills through play.",
+    },
+    {
+      image:
+        "/images/children/child-doing-therapy-session-with-psychologist.jpg",
+      title: "Therapy That Feels Supportive",
+      description: "Progress at your pace.",
     },
     {
       image: "/images/senior-woman-with-her-caregiver-outdoor.jpg",
       title: "Personalized Support Services",
       description: "Support tailored to your goals.",
-    },
-    {
-      image: "/images/medium-shot-smiley-disabled-man-work.jpg",
-      title: "Empowering Independence Together",
-      description: "Confidence, skills and connection.",
-    },
-    {
-      image: "/images/doctor-talking-senior-man-indoors.jpg",
-      title: "Quality Care You Can Trust",
-      description: "Reliable support you can trust.",
     },
   ];
 
@@ -57,23 +78,27 @@ export default function Index() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Left-aligned Text and Image Carousel */}
-      <section className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen flex items-center overflow-hidden pt-20 md:pt-24">
         {/* Background Images Carousel */}
-        <div className="absolute inset-0">
+        <div
+          ref={parallaxRef as any}
+          className="absolute inset-0 will-change-transform"
+        >
           {heroContent.map((content, index) => (
             <img
               key={index}
               src={content.image}
               alt=""
-              className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 select-none ${
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 select-none ${
                 index === currentImageIndex ? "opacity-100" : "opacity-0"
               }`}
+              style={{ objectPosition: "center 20%" }}
               loading={index === currentImageIndex ? "eager" : "lazy"}
               decoding="async"
             />
           ))}
           {/* Gradient overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/45 to-transparent" />
         </div>
 
         {/* Hero Content - Left Aligned */}
@@ -118,16 +143,20 @@ export default function Index() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.4, delay: 0.05 }}
-                  className="text-base md:text-lg mb-6 opacity-90 leading-relaxed max-w-md"
+                  className="text-sm md:text-base mb-4 opacity-95 leading-relaxed max-w-sm"
                 >
-                  {heroContent[currentImageIndex].description}
+                  {(() => {
+                    const desc = heroContent[currentImageIndex].description;
+                    const max = 70;
+                    return desc.length > max ? desc.slice(0, max) + "…" : desc;
+                  })()}
                 </motion.p>
               </AnimatePresence>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white text-brand-teal hover:bg-gray-100 text-lg px-8 py-4 transition-transform duration-300 hover:scale-105"
+                  className="bg-white text-brand-teal hover:bg-gray-100 text-lg px-6 py-3 sm:px-8 sm:py-4 transition-transform duration-300 hover:scale-105 whitespace-nowrap"
                 >
                   <Link to="/services">
                     Explore Our Services <ArrowRight className="ml-2 w-5 h-5" />
@@ -137,7 +166,7 @@ export default function Index() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="bg-transparent border-white text-white hover:bg-white hover:text-brand-teal text-lg px-8 py-4 transition-transform duration-300 hover:scale-105"
+                  className="bg-transparent border-white text-white hover:bg-white hover:text-brand-teal text-lg px-6 py-3 sm:px-8 sm:py-4 transition-transform duration-300 hover:scale-105 whitespace-nowrap"
                 >
                   <Link to="/contact">Get In Touch</Link>
                 </Button>
@@ -147,6 +176,7 @@ export default function Index() {
           </div>
         </div>
 
+        <NDISBadge className="z-20" />
         {/* Carousel Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
           {heroContent.map((_, index) => (
@@ -159,7 +189,6 @@ export default function Index() {
               onClick={() => setCurrentImageIndex(index)}
             />
           ))}
-          <NDISBadge position="bottom-right" size="md" className="z-10" />
         </div>
       </section>
 
@@ -189,7 +218,7 @@ export default function Index() {
             </div>
             <div className="relative">
               <img
-                src="/images/contented-senior-patient-with-kind-doctor-nursing-home-time-together.jpg"
+                src="/images/children/happy-child-with-down-syndrome-playing-outside.jpg"
                 alt="Caring support worker helping elderly person"
                 className="rounded-lg shadow-xl"
               />
@@ -219,7 +248,8 @@ export default function Index() {
                 const base = [
                   {
                     title: "Autism Support",
-                    image: "/images/female-doctor-hospital.jpg",
+                    image:
+                      "/images/children/child-doing-therapy-session-with-psychologist.jpg",
                     description:
                       "Specialised autism support focusing on communication, routines, sensory needs and independence.",
                     href: "/services",
@@ -227,15 +257,14 @@ export default function Index() {
                   {
                     title: "Personal Care",
                     image:
-                      "/images/female-caretaker-her-client-s-house-taking-care-elderly-person.jpg",
+                      "/images/children/happy-woman-girl-with-down-syndrome-painting-each-other-s-faces.jpg",
                     description:
                       "Compassionate personal care services tailored to individual needs.",
                     href: "/services/personal-care",
                   },
                   {
                     title: "Assistance with Daily Living",
-                    image:
-                      "/images/medium-shot-men-working-together-indoors.jpg",
+                    image: "/images/children/lifestyle-child-wheelchair.jpg",
                     description:
                       "Supporting independence through daily living assistance.",
                     href: "/services/daily-living",
@@ -243,7 +272,7 @@ export default function Index() {
                   {
                     title: "Respite Care",
                     image:
-                      "/images/young-woman-doing-sport-exercises-sunrise-beach-morning.jpg",
+                      "/images/children/mother-playing-with-her-autistic-son-using-toys.jpg",
                     description:
                       "Quality respite care to give families peace of mind.",
                     href: "/services/respite-care",
@@ -251,7 +280,7 @@ export default function Index() {
                   {
                     title: "Supported Independent Living (SIL)",
                     image:
-                      "/images/wellness-exercise-health-lifestyle-nutrition-concept.jpg",
+                      "/images/children/doctor-doing-their-work-pediatrics-office.jpg",
                     description:
                       "Empowering independent living with the right support.",
                     href: "/services/supported-living",
@@ -300,7 +329,7 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
-                src="/images/smiley-man-woman-talking.jpg"
+                src="/images/children/doctor-doing-their-work-pediatrics-office2.jpg"
                 alt="Support workers with clients"
                 className="rounded-lg shadow-xl"
               />
@@ -532,6 +561,9 @@ export default function Index() {
                             </p>
                           </div>
                         </div>
+                        <p className="mt-2 text-xs text-brand-teal">
+                          Team: Kabir Awan • Mureed Awan • Arshad Mehmood
+                        </p>
                       </div>
                     </CardContent>
                   </Card>

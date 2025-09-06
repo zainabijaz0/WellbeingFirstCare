@@ -47,11 +47,28 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Logo variant="white" showText={false} size="lg" className="mb-4" />
-            <p className="text-gray-300 text-sm leading-relaxed mb-4">
+            <img
+              src="/images/footer-logo.png"
+              alt="Wellbeing First Care"
+              className="h-16 md:h-20 w-auto mb-4 select-none"
+              loading="lazy"
+              decoding="async"
+            />
+            <p className="text-gray-100 text-sm leading-relaxed mb-4">
               We improve lives for individuals with disabilities through
               compassionate, comprehensive support.
             </p>
+            <div className="mt-3 inline-flex items-center gap-3">
+              <div className="rounded-full bg-white p-1.5 shadow ring-1 ring-black/5">
+                <img
+                  src="/images/NDIS.png"
+                  alt="NDIS"
+                  className="h-10 w-auto object-contain select-none"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -117,7 +134,7 @@ export function Footer() {
               <div className="flex items-center gap-2 text-sm">
                 <Mail className="w-4 h-4 text-brand-teal" />
                 <span className="text-gray-300">
-                  info@wellbeingfirstcare.com.au
+                  info@wellbeingfirstcare.com
                 </span>
               </div>
 
@@ -153,7 +170,7 @@ export function Footer() {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="text-center">
             <p className="text-gray-400 text-sm">
-              © 2024 All rights reserved.
+              © 2025 All rights reserved.
             </p>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import NDISBadge from "@/components/NDISBadge";
 import { motion, AnimatePresence } from "framer-motion";
+import { useParallax } from "@/hooks/use-parallax";
 
 interface ServicePageProps {
   serviceName: string;
@@ -38,6 +39,7 @@ export function ServicePageTemplate({
 }: ServicePageProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const parallaxRef = useParallax(0.2);
 
   // Auto-rotate carousel and preserve scroll position across slide changes.
   useEffect(() => {
@@ -52,9 +54,12 @@ export function ServicePageTemplate({
   return (
     <div className="min-h-screen">
       {/* Hero Section with Left-aligned Text and Image Carousel */}
-      <section className="relative h-screen flex items-center overflow-hidden">
+      <section className="relative h-screen flex items-center overflow-hidden pt-20 md:pt-24">
         {/* Background Images Carousel */}
-        <div className="absolute inset-0">
+        <div
+          ref={parallaxRef as any}
+          className="absolute inset-0 will-change-transform"
+        >
           {heroImages.map((image, index) => (
             <div
               key={index}
@@ -64,7 +69,7 @@ export function ServicePageTemplate({
               style={{
                 backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("${image}")`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "center 20%",
               }}
             />
           ))}
@@ -92,14 +97,15 @@ export function ServicePageTemplate({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.4, delay: 0.05 }}
-                className="text-base md:text-lg mb-6 opacity-90 leading-relaxed max-w-lg"
+                className="text-sm md:text-base mb-4 opacity-95 leading-relaxed max-w-md"
               >
                 {heroDescription}
               </motion.p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 min-w-0">
                 <Button
+                  asChild
                   size="lg"
-                  className="bg-white text-brand-teal hover:bg-gray-100 text-lg px-8 py-4"
+                  className="bg-white text-brand-teal hover:bg-gray-100 text-lg px-5 py-3 sm:px-7 sm:py-4 whitespace-nowrap"
                 >
                   <Link to="/contact">
                     Get In Contact <ArrowRight className="ml-2 w-5 h-5" />
@@ -109,7 +115,7 @@ export function ServicePageTemplate({
                   asChild
                   variant="outline"
                   size="lg"
-                  className="bg-transparent border-white text-white hover:bg-white hover:text-brand-teal text-lg px-8 py-4"
+                  className="bg-transparent border-white text-white hover:bg-white hover:text-brand-teal text-lg px-5 py-3 sm:px-7 sm:py-4 whitespace-nowrap"
                 >
                   <Link to="/services">View All Services</Link>
                 </Button>
@@ -119,7 +125,7 @@ export function ServicePageTemplate({
           </div>
         </div>
 
-        <NDISBadge position="bottom-right" size="md" className="z-10" />
+        <NDISBadge position="top-right" size="lg" className="z-20" />
         {/* Carousel Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
           {heroImages.map((_, index) => (
@@ -247,25 +253,32 @@ export function ServicePageTemplate({
         </div>
       </section>
 
-      {/* Service Details */}
-      <section className="py-20 bg-brand-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      {/* How to Access - Dynamic per service with image background */}
+      <section className="py-20 relative overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.35)), url("${heroImages[0]}")`,
+            backgroundSize: "cover",
+            backgroundPosition: "center 30%",
+          }}
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
             <h2 className="text-4xl font-bold text-white mb-4">
-              How to Access Our Assistance
+              How to Access {serviceName}
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Starting with our {serviceName.toLowerCase()} service is simple.
-              Contact us to discuss your needs, and we will create a
-              personalized care plan to support you or your loved one
-              effectively.
+            <p className="text-lg text-white/90 max-w-3xl mx-auto">
+              Getting started with {serviceName.toLowerCase()} is simple. Reach
+              out and we’ll tailor a plan around your goals and preferences.
             </p>
           </div>
 
           <div className="text-center">
             <Button
+              asChild
               size="lg"
-              className="bg-brand-teal hover:bg-brand-teal/90 text-lg px-8 py-4"
+              className="bg-white text-brand-teal hover:bg-gray-100 text-lg px-6 py-3 sm:px-8 sm:py-4 whitespace-nowrap"
             >
               <Link to="/contact">
                 Get In Contact <ArrowRight className="ml-2 w-5 h-5" />

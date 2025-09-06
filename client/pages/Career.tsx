@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import NDISBadge from "@/components/NDISBadge";
 
 export default function Career() {
   const [formData, setFormData] = useState({
@@ -68,12 +69,12 @@ export default function Career() {
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 bg-fixed"
           style={{
             backgroundImage:
               'linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("/images/medium-shot-men-working-together-indoors.jpg")',
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center 20%",
           }}
         />
         <div className="relative z-10 text-center text-white">
@@ -81,6 +82,7 @@ export default function Career() {
             Join Our Team At Wellbeing First Care
           </h1>
         </div>
+        <NDISBadge className="z-20" />
       </section>
 
       {/* Career Information */}
@@ -343,7 +345,7 @@ export default function Career() {
           style={{
             backgroundImage: 'url("/images/female-doctor-hospital.jpg")',
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center 20%",
           }}
         />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -354,7 +356,7 @@ export default function Career() {
             <Button
               asChild
               size="lg"
-              className="bg-brand-teal hover:bg-brand-teal/90"
+              className="bg-brand-teal hover:bg-brand-teal/90 shadow ring-1 ring-white/30"
             >
               <a href="#application-form">Apply Now</a>
             </Button>
@@ -362,11 +364,9 @@ export default function Career() {
               asChild
               size="lg"
               variant="outline"
-              className="bg-transparent border-white text-white hover:bg-white hover:text-brand-navy"
+              className="bg-white/10 backdrop-blur-sm border-white/70 text-white hover:bg-white hover:text-brand-navy ring-1 ring-white/50"
             >
-              <a href="mailto:careers@wellbeingfirstcare.com.au">
-                Email HR Team
-              </a>
+              <a href="mailto:info@wellbeingfirstcare.com">Email HR Team</a>
             </Button>
           </div>
         </div>

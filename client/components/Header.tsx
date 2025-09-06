@@ -46,6 +46,13 @@ export function Header() {
 
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
+    setIsServicesOpen(false);
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    setTimeout(() => window.scrollTo(0, 0), 0);
+  };
+
   useEffect(() => {
     const onDocClick = (e: MouseEvent) => {
       if (
@@ -124,7 +131,7 @@ export function Header() {
                           <Link
                             to={item.href}
                             className="block px-4 py-3 text-sm text-brand-navy hover:bg-brand-light hover:text-brand-teal transition-colors duration-200"
-                            onClick={() => setIsServicesOpen(false)}
+                            onClick={handleNavClick}
                           >
                             View all services
                           </Link>
@@ -134,7 +141,7 @@ export function Header() {
                               key={subItem.name}
                               to={subItem.href}
                               className="block px-4 py-3 text-sm text-brand-navy hover:bg-brand-light hover:text-brand-teal transition-colors duration-200"
-                              onClick={() => setIsServicesOpen(false)}
+                              onClick={handleNavClick}
                             >
                               {subItem.name}
                             </Link>
@@ -166,13 +173,15 @@ export function Header() {
               >
                 <Link to="/about">Explore Us</Link>
               </Button>
-              <img
-                src="/images/NDIS.png"
-                alt="NDIS registered provider"
-                className="h-8 w-auto object-contain select-none"
-                loading="lazy"
-                decoding="async"
-              />
+              <div className="rounded-full bg-white p-1.5 shadow ring-1 ring-black/5">
+                <img
+                  src="/images/NDIS.png"
+                  alt="NDIS"
+                  className="h-10 w-auto object-contain select-none"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </div>
 
             {/* Mobile menu button */}
@@ -211,7 +220,7 @@ export function Header() {
                           ? "text-brand-teal bg-gray-50"
                           : "text-brand-navy"
                       }`}
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={handleNavClick}
                     >
                       {item.name}
                     </Link>
@@ -223,7 +232,7 @@ export function Header() {
                             key={subItem.name}
                             to={subItem.href}
                             className="block px-3 py-2 text-sm text-brand-gray hover:text-brand-teal hover:bg-gray-50"
-                            onClick={() => setIsMenuOpen(false)}
+                            onClick={handleNavClick}
                           >
                             {subItem.name}
                           </Link>
@@ -237,18 +246,20 @@ export function Header() {
                     asChild
                     className="w-full bg-brand-teal hover:bg-brand-teal/90 text-white"
                   >
-                    <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+                    <Link to="/about" onClick={handleNavClick}>
                       Explore Us
                     </Link>
                   </Button>
                   <div className="flex justify-end">
-                    <img
-                      src="/images/NDIS.png"
-                      alt="NDIS registered provider"
-                      className="h-8 w-auto object-contain select-none"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    <div className="rounded-full bg-white p-1.5 shadow ring-1 ring-black/5">
+                      <img
+                        src="/images/NDIS.png"
+                        alt="NDIS"
+                        className="h-9 w-auto object-contain select-none"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import HorizontalScroller from "@/components/HorizontalScroller";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import NDISBadge from "@/components/NDISBadge";
 
 export default function Reviews() {
   const allReviews = [
@@ -109,8 +110,17 @@ export default function Reviews() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-brand-navy text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative text-white py-20 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-fixed"
+          style={{
+            backgroundImage:
+              'linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.35)), url("/images/doctor-with-stethoscope-hands-hospital-background.jpg")',
+            backgroundSize: "cover",
+            backgroundPosition: "center 20%",
+          }}
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             What Our Clients Say
           </h1>
@@ -119,6 +129,7 @@ export default function Reviews() {
             their experiences with Wellbeing First Care's support services.
           </p>
         </div>
+        <NDISBadge className="z-20" />
       </section>
 
       {/* Stats Section */}
@@ -257,6 +268,9 @@ export default function Reviews() {
                             </p>
                             <p className="text-xs text-gray-500">
                               {review.date}
+                            </p>
+                            <p className="text-xs text-brand-teal mt-1">
+                              Team: Kabir Awan • Mureed Awan • Arshad Mehmood
                             </p>
                           </div>
                           <div className="text-right">

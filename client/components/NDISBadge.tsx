@@ -8,10 +8,10 @@ interface NDISBadgeProps {
 
 export default function NDISBadge({
   className = "",
-  size = "md",
-  position = "bottom-right",
+  size = "lg",
+  position = "top-right",
 }: NDISBadgeProps) {
-  const sizeClasses = size === "lg" ? "w-16" : size === "sm" ? "w-10" : "w-12";
+  const sizeClasses = size === "lg" ? "w-20" : size === "sm" ? "w-12" : "w-14";
   const posClasses =
     position === "top-left"
       ? "top-2 left-2"
@@ -22,12 +22,16 @@ export default function NDISBadge({
           : "bottom-2 right-2";
 
   return (
-    <img
-      src="/images/NDIS.png"
-      alt="NDIS registered provider"
-      className={`pointer-events-none select-none drop-shadow-md absolute ${posClasses} ${sizeClasses} h-auto ${className}`}
-      loading="lazy"
-      decoding="async"
-    />
+    <div
+      className={`pointer-events-none select-none absolute ${posClasses} z-20 rounded-full bg-white/60 backdrop-blur-sm ring-1 ring-white/50 shadow-lg p-1.5 ${className}`}
+    >
+      <img
+        src="/images/NDIS.png"
+        alt="NDIS"
+        className={`${sizeClasses} h-auto drop-shadow-sm`}
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
   );
 }

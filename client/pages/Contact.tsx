@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import NDISBadge from "@/components/NDISBadge";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -50,17 +51,18 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 bg-fixed"
           style={{
             backgroundImage:
               'linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("/images/female-doctor-hospital.jpg")',
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center 20%",
           }}
         />
         <div className="relative z-10 text-center text-white">
           <h1 className="text-4xl md:text-5xl font-bold">Contact Us</h1>
         </div>
+        <NDISBadge className="z-20" />
       </section>
 
       {/* Contact Form Section */}
@@ -94,6 +96,7 @@ export default function Contact() {
                       Contact
                     </h3>
                     <p className="text-gray-600">+61 451 034 940</p>
+                    <p className="text-gray-600">+61 451 185 550</p>
                   </div>
                 </div>
 
@@ -105,9 +108,7 @@ export default function Contact() {
                     <h3 className="font-semibold text-brand-navy mb-1">
                       Email
                     </h3>
-                    <p className="text-gray-600">
-                      info@wellbeingfirstcare.com.au
-                    </p>
+                    <p className="text-gray-600">info@wellbeingfirstcare.com</p>
                   </div>
                 </div>
 
@@ -119,7 +120,7 @@ export default function Contact() {
                     <h3 className="font-semibold text-brand-navy mb-1">
                       Location
                     </h3>
-                    <p className="text-gray-600">Serving Australia-wide</p>
+                    <p className="text-gray-600">Melbourne</p>
                   </div>
                 </div>
 
@@ -257,7 +258,7 @@ export default function Contact() {
           style={{
             backgroundImage: 'url("/images/female-doctor-hospital.jpg")',
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center 20%",
           }}
         />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -271,7 +272,15 @@ export default function Contact() {
               variant="secondary"
               className="bg-white text-brand-teal hover:bg-gray-100"
             >
-              <a href="tel:+61451034940">Call Now: +61 451 034 940</a>
+              <a href="tel:+61451034940">Call: +61 451 034 940</a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="secondary"
+              className="bg-white text-brand-teal hover:bg-gray-100"
+            >
+              <a href="tel:+61451185550">Call: +61 451 185 550</a>
             </Button>
             <Button
               asChild
@@ -279,7 +288,7 @@ export default function Contact() {
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white hover:text-brand-teal"
             >
-              <a href="mailto:info@wellbeingfirstcare.com.au">Send Email</a>
+              <a href="mailto:info@wellbeingfirstcare.com">Send Email</a>
             </Button>
           </div>
         </div>
