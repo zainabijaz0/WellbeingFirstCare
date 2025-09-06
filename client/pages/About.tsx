@@ -264,6 +264,41 @@ export default function About() {
                       "Consistently professional care. Mureed Awan ensured smooth service delivery every time.",
                     verified: true,
                   },
+                  {
+                    name: "David Chen",
+                    rating: 5,
+                    review:
+                      "Our support plan was tailored perfectly. Communication is excellent and carers are always on time.",
+                    verified: true,
+                  },
+                  {
+                    name: "Sarah Mitchell",
+                    rating: 5,
+                    review:
+                      "Compassionate workers who really listen. My daughter looks forward to every visit.",
+                    verified: true,
+                  },
+                  {
+                    name: "Michael Roberts",
+                    rating: 5,
+                    review:
+                      "Transition to SIL was smooth and respectful. The team handled everything professionally.",
+                    verified: true,
+                  },
+                  {
+                    name: "Emma Thompson",
+                    rating: 5,
+                    review:
+                      "Responsive coordinators and flexible scheduling. Great experience overall.",
+                    verified: true,
+                  },
+                  {
+                    name: "Maria Rodriguez",
+                    rating: 5,
+                    review:
+                      "Reliable transport and friendly drivers. Has made community access so much easier.",
+                    verified: true,
+                  },
                 ];
                 const list = [...base, ...base];
                 return list.map((review, index) => (
