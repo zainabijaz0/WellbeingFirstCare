@@ -290,7 +290,7 @@ export default function Contact() {
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white hover:text-brand-teal"
             >
-              <a href="mailto:info@wellbeingfirstcare.com.au">Send Email</a>
+              <a href="mailto:info@wellbeingfirstcare.com">Send Email</a>
             </Button>
           </div>
         </div>
