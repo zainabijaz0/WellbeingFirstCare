@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, Facebook, Instagram } from "lucide-react";
-import { Logo } from "./Logo";
 
 export function Footer() {
   const quickLinks = [
