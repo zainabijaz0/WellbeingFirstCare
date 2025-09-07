@@ -27,8 +27,13 @@ export default function Index() {
     {
       image:
         "/images/children/happy-child-with-down-syndrome-playing-outside.jpg",
-      title: "Care That Celebrates Every Child",
-      description: "Joyful, inclusive support.",
+      title: "Care That Celebrates Every Person",
+      description: "Joyful, inclusive support for all ages.",
+    },
+    {
+      image: "/images/female-nurse-taking-care-elderly-person.jpg",
+      title: "Respectful Support For Seniors",
+      description: "Compassionate daily assistance.",
     },
     {
       image:
@@ -37,31 +42,29 @@ export default function Index() {
       description: "Calm, consistent care.",
     },
     {
-      image: "/images/children/medical-worker-taking-girl-temperature.jpg",
-      title: "Trusted Clinical Support",
-      description: "Safe, professional help.",
+      image: "/images/medium-shot-smiley-disabled-man-work.jpg",
+      title: "Independence At Work And Home",
+      description: "Confidence through practical support.",
     },
     {
       image: "/images/children/lifestyle-child-wheelchair.jpg",
-      title: "Inclusive Support For Independence",
+      title: "Accessible Care That Empowers",
       description: "Confidence and mobility.",
     },
     {
-      image:
-        "/images/children/happy-woman-girl-with-down-syndrome-painting-each-other-s-faces.jpg",
-      title: "Creativity, Connection, Growth",
-      description: "Skills through play.",
+      image: "/images/doctor-talking-senior-man-indoors.jpg",
+      title: "Professional Clinical Guidance",
+      description: "Safe, reliable healthcare support.",
     },
     {
-      image:
-        "/images/children/child-doing-therapy-session-with-psychologist.jpg",
-      title: "Therapy That Feels Supportive",
-      description: "Progress at your pace.",
+      image: "/images/smiley-man-woman-talking.jpg",
+      title: "Community, Connection, Belonging",
+      description: "Meaningful relationships and participation.",
     },
     {
       image: "/images/senior-woman-with-her-caregiver-outdoor.jpg",
-      title: "Personalized Support Services",
-      description: "Support tailored to your goals.",
+      title: "Personalised Support Services",
+      description: "Care tailored to your goals.",
     },
   ];
 
