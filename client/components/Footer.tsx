@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Phone, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, Facebook, Instagram } from "lucide-react";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -141,25 +141,22 @@ export function Footer() {
               {/* Social Media */}
               <div className="flex items-center gap-3 pt-2">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/share/1GB43NEGyr/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/wellbeing_first_care?igsh=cHJnNTMyY3R1d3Ax&utm_source=qr"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5" />
                 </a>
               </div>
             </div>
