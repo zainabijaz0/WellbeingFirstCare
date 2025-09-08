@@ -274,21 +274,21 @@ export default function About() {
                     name: "Peak Mobility",
                     rating: 5,
                     review:
-                      "Highly recommend their NDIS access assistance! Kabir Awan and team matched us with the perfect care provider for autism support.",
+                      "Highly recommend their NDIS access assistance! Kabir and team matched us with the perfect care provider for autism support.",
                     verified: true,
                   },
                   {
                     name: "Shania Awais",
                     rating: 5,
                     review:
-                      "Very good team and operation. Arshad Mahmood coordinated support that fits our routine perfectly.",
+                      "Very good team and operation. Arshad coordinated support that fits our routine perfectly.",
                     verified: true,
                   },
                   {
                     name: "Pradeepkumar Kaur",
                     rating: 5,
                     review:
-                      "Consistently professional care. Mureed Awan ensured smooth service delivery every time.",
+                      "Consistently professional care. Mureed ensured smooth service delivery every time.",
                     verified: true,
                   },
                   {
