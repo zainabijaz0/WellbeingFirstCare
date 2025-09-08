@@ -43,7 +43,7 @@ export const handleContact: RequestHandler = async (req, res) => {
     }
 
     const data = parsed.data;
-    const to = process.env.MAIL_TO || "info@wellbeingfirstcare.com";
+    const to = process.env.MAIL_TO || "info@wellbeingcare.com";
     const from = process.env.MAIL_FROM || `no-reply@${req.hostname}`;
 
     const transporter = getTransport();

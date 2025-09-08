@@ -51,7 +51,7 @@ export const handleCareer: RequestHandler = async (req, res) => {
         .json({ error: "Invalid payload", details: parsed.error.flatten() });
     }
 
-    const to = process.env.MAIL_TO || "info@wellbeingfirstcare.com";
+    const to = process.env.MAIL_TO || "info@wellbeingcare.com";
     const from = process.env.MAIL_FROM || `no-reply@${req.hostname}`;
 
     const { firstName, lastName, email, phone, message } = parsed.data;
