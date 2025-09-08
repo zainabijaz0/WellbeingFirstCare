@@ -366,7 +366,7 @@ export default function Career() {
               variant="outline"
               className="bg-white/10 backdrop-blur-sm border-white/70 text-white hover:bg-white hover:text-brand-navy ring-1 ring-white/50"
             >
-              <a href="mailto:info@wellbeingfirstcare.com">Email HR Team</a>
+              <a href="mailto:info@wellbeingcare.com">Email HR Team</a>
             </Button>
           </div>
         </div>
