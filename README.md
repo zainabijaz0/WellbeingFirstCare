@@ -69,7 +69,7 @@ Copy .env.example to .env and fill in values (never commit secrets):
 ```
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=info@wellbeingfirstcare.com
+SMTP_USER=your-smtp-username@example.com
 SMTP_PASS=        # Gmail App Password (not your login password)
 MAIL_TO=info@wellbeingcare.com
 MAIL_FROM=        # Optional. Defaults to no-reply@<host>
@@ -140,7 +140,7 @@ Using Builder.io with MCP (optional):
 ## Contact
 
 - Phone: +61 451 034 940, +61 451 185 550
-- Email: info@wellbeingcare.com (delivery), info@wellbeingfirstcare.com (SMTP user)
+- Email: info@wellbeingcare.com (public contact). Your SMTP_USER should be set via env only.
 
 ---
 
