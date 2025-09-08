@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Mail } from "lucide-react";
 import { Logo } from "./Logo";
 import { Button } from "./ui/button";
 import { AnimatePresence, motion } from "framer-motion";
@@ -85,10 +85,11 @@ export function Header() {
             </a>
           </div>
           <a
-            href="tel:+61451034940"
+            href="mailto:info@wellbeingfirstcare.com?subject=Enquiry&body=Hello%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20services."
             className="px-2 py-1 rounded-md bg-white/15 hover:bg-white/25 transition-colors inline-flex items-center gap-1"
           >
-            <span className="hidden sm:inline">Call Now</span><span className="inline sm:hidden">Call</span>
+            <Mail className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span className="hidden sm:inline">Email Us</span><span className="inline sm:hidden">Email</span>
           </a>
         </div>
       </div>
