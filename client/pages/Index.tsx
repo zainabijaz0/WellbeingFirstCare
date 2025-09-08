@@ -474,7 +474,7 @@ export default function Index() {
                     platform: "Care.com",
                     location: "Melbourne, Australia",
                     review:
-                      "Mureed Awan and Arshad Mehmood ensured a smooth experience. Professional, kind and always on time. Exceptional service!",
+                      "Mureed Awan and Arshad Mahmood ensured a smooth experience. Professional, kind and always on time. Exceptional service!",
                   },
                   {
                     name: "Aisha Khan",
@@ -490,7 +490,7 @@ export default function Index() {
                     platform: "NDIS Portal",
                     location: "Melbourne, Australia",
                     review:
-                      "Arshad Mehmood's coordination and Kabir Awan's follow‑up were incredible. We always felt heard and cared for.",
+                      "Arshad Mahmood's coordination and Kabir Awan's follow‑up were incredible. We always felt heard and cared for.",
                   },
                   {
                     name: "Michael Roberts",
@@ -514,7 +514,7 @@ export default function Index() {
                     platform: "Google Reviews",
                     location: "Melbourne, Australia",
                     review:
-                      "We appreciate Arshad Mehmood's attention to detail and Mureed Awan's responsiveness. Outstanding all around.",
+                      "We appreciate Arshad Mahmood's attention to detail and Mureed Awan's responsiveness. Outstanding all around.",
                   },
                   {
                     name: "Maria Rodriguez",
@@ -552,7 +552,7 @@ export default function Index() {
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="font-semibold text-brand-navy">
-                              {review.name}
+                              {review.name.split(" ")[0]}
                             </p>
                             <p className="text-sm text-gray-600">
                               {review.location}
@@ -565,7 +565,7 @@ export default function Index() {
                           </div>
                         </div>
                         <p className="mt-2 text-xs text-brand-teal">
-                          Team: Kabir Awan • Mureed Awan • Arshad Mehmood
+                          Team: Kabir Awan • Mureed Awan • Arshad Mahmood
                         </p>
                       </div>
                     </CardContent>
