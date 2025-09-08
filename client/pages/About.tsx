@@ -281,7 +281,7 @@ export default function About() {
                     name: "Shania Awais",
                     rating: 5,
                     review:
-                      "Very good team and operation. Arshad Mehmood coordinated support that fits our routine perfectly.",
+                      "Very good team and operation. Arshad Mahmood coordinated support that fits our routine perfectly.",
                     verified: true,
                   },
                   {
@@ -354,13 +354,13 @@ export default function About() {
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="font-semibold text-brand-navy">
-                              {review.name}
+                              {review.name.split(" ")[0]}
                             </p>
                             <p className="text-sm text-gray-600">
                               Melbourne, Australia
                             </p>
                             <p className="text-xs text-brand-teal mt-1">
-                              Team: Kabir Awan • Mureed Awan • Arshad Mehmood
+                              Team: Kabir Awan • Mureed Awan • Arshad Mahmood
                             </p>
                             {review.verified && (
                               <p className="text-sm text-brand-teal">
