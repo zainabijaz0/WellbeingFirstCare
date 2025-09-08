@@ -174,7 +174,7 @@ export default function Reviews() {
                 phone: "+61 451 185 550",
               },
               {
-                name: "Arshad Mehmood",
+                name: "Arshad Mahmood",
                 role: "Operations",
                 note: "Ensures smooth delivery of supports with attention to every detail.",
               },
@@ -261,7 +261,7 @@ export default function Reviews() {
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="font-semibold text-brand-navy">
-                              {review.name}
+                              {review.name.split(" ")[0]}
                             </p>
                             <p className="text-sm text-gray-600">
                               {review.location}
@@ -270,7 +270,7 @@ export default function Reviews() {
                               {review.date}
                             </p>
                             <p className="text-xs text-brand-teal mt-1">
-                              Team: Kabir Awan • Mureed Awan • Arshad Mehmood
+                              Team: Kabir Awan • Mureed Awan • Arshad Mahmood
                             </p>
                           </div>
                           <div className="text-right">

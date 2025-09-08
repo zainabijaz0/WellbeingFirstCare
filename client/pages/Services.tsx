@@ -176,14 +176,14 @@ export default function Services() {
                     name: "Emily Turner",
                     rating: 5,
                     review:
-                      "Kabir Awan and Mureed Awan ensured we had the right supports from day one. Truly caring and responsive team.",
+                      "Kabir ensured we had the right supports from day one. Truly caring and responsive team.",
                     service: "Supported Independent Living",
                   },
                   {
                     name: "Aisha Khan",
                     rating: 5,
                     review:
-                      "Arshad Mehmood coordinated transport flawlessly and Kabir Awan followed up personally. Highly recommended!",
+                      "Arshad coordinated transport flawlessly. Highly recommended!",
                     service: "Transport Services",
                   },
                 ])
@@ -211,7 +211,7 @@ export default function Services() {
                       </p>
                       <div className="border-t pt-4">
                         <p className="font-semibold text-brand-navy">
-                          {review.name}
+                          {review.name.split(" ")[0]}
                         </p>
                         <p className="text-sm text-gray-600">
                           Melbourne, Australia
@@ -220,7 +220,7 @@ export default function Services() {
                           {review.service}
                         </p>
                         <p className="text-xs text-brand-teal mt-1">
-                          Team: Kabir Awan • Mureed Awan • Arshad Mehmood
+                          Team: Kabir Awan • Mureed Awan • Arshad Mahmood
                         </p>
                       </div>
                     </CardContent>

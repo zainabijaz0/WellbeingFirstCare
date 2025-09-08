@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Mail } from "lucide-react";
 import { Logo } from "./Logo";
 import { Button } from "./ui/button";
 import { AnimatePresence, motion } from "framer-motion";
@@ -70,25 +70,24 @@ export function Header() {
     <>
       {/* Top Bar */}
       <div className="bg-brand-teal text-white py-2 px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between text-xs sm:text-sm">
-          <div className="flex items-center gap-2 whitespace-nowrap">
-            <Phone className="w-4 h-4" />
+        <div className="max-w-7xl mx-auto flex items-center justify-between text-[10px] sm:text-xs md:text-sm">
+          <div className="flex items-center gap-1 whitespace-nowrap">
+            <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
             <a href="tel:+61451034940" className="hover:underline">
               +61 451 034 940
             </a>
             <span className="hidden sm:inline">|</span>
-            <a
-              href="tel:+61451185550"
-              className="hidden sm:inline hover:underline"
-            >
+            <a href="tel:+61451185550" className="hover:underline">
               +61 451 185 550
             </a>
           </div>
           <a
-            href="tel:+61451034940"
-            className="px-2 py-1 rounded-md bg-white/15 hover:bg-white/25 transition-colors"
+            href="mailto:info@wellbeingfirstcare.com?subject=Enquiry&body=Hello%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20services."
+            className="px-2 py-1 rounded-md bg-white/15 hover:bg-white/25 transition-colors inline-flex items-center gap-1"
           >
-            Call Now
+            <Mail className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span className="hidden sm:inline">Email Us</span>
+            <span className="inline sm:hidden">Email</span>
           </a>
         </div>
       </div>
