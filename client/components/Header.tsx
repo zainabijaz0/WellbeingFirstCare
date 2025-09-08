@@ -77,10 +77,7 @@ export function Header() {
               +61 451 034 940
             </a>
             <span className="hidden sm:inline">|</span>
-            <a
-              href="tel:+61451185550"
-              className="hover:underline"
-            >
+            <a href="tel:+61451185550" className="hover:underline">
               +61 451 185 550
             </a>
           </div>
@@ -89,7 +86,8 @@ export function Header() {
             className="px-2 py-1 rounded-md bg-white/15 hover:bg-white/25 transition-colors inline-flex items-center gap-1"
           >
             <Mail className="w-3 h-3 sm:w-4 sm:h-4" />
-            <span className="hidden sm:inline">Email Us</span><span className="inline sm:hidden">Email</span>
+            <span className="hidden sm:inline">Email Us</span>
+            <span className="inline sm:hidden">Email</span>
           </a>
         </div>
       </div>
