@@ -466,7 +466,7 @@ export default function Index() {
                     platform: "Google Reviews",
                     location: "Melbourne, Australia",
                     review:
-                      "Kabir Awan's team provided outstanding personal care and truly listened to our needs. We felt supported every step of the way.",
+                      "Kabir's team provided outstanding personal care and truly listened to our needs. We felt supported every step of the way.",
                   },
                   {
                     name: "David Chen",
@@ -474,7 +474,7 @@ export default function Index() {
                     platform: "Care.com",
                     location: "Melbourne, Australia",
                     review:
-                      "Mureed Awan and Arshad Mahmood ensured a smooth experience. Professional, kind and always on time. Exceptional service!",
+                      "Mureed ensured a smooth experience. Professional, kind and always on time. Exceptional service!",
                   },
                   {
                     name: "Aisha Khan",
@@ -482,7 +482,7 @@ export default function Index() {
                     platform: "Google Reviews",
                     location: "Melbourne, Australia",
                     review:
-                      "Kabir Awan guided us through the plan so clearly. The whole team made a real difference in our daily life.",
+                      "Kabir guided us through the plan so clearly. The whole team made a real difference in our daily life.",
                   },
                   {
                     name: "Emily Turner",
@@ -490,7 +490,7 @@ export default function Index() {
                     platform: "NDIS Portal",
                     location: "Melbourne, Australia",
                     review:
-                      "Arshad Mahmood's coordination and Kabir Awan's follow‑up were incredible. We always felt heard and cared for.",
+                      "Arshad's coordination was incredible. We always felt heard and cared for.",
                   },
                   {
                     name: "Michael Roberts",
@@ -498,7 +498,7 @@ export default function Index() {
                     platform: "NDIS Portal",
                     location: "Melbourne, Australia",
                     review:
-                      "Mureed Awan's team delivered reliable support. Friendly staff and consistent quality—highly recommended.",
+                      "Mureed's team delivered reliable support. Friendly staff and consistent quality—highly recommended.",
                   },
                   {
                     name: "Lisa Garcia",
@@ -506,7 +506,7 @@ export default function Index() {
                     platform: "Care.com",
                     location: "Melbourne, Australia",
                     review:
-                      "Kabir Awan and the team helped my mother regain confidence. Compassionate care with real results.",
+                      "Kabir and the team helped my mother regain confidence. Compassionate care with real results.",
                   },
                   {
                     name: "James Wilson",
@@ -514,7 +514,7 @@ export default function Index() {
                     platform: "Google Reviews",
                     location: "Melbourne, Australia",
                     review:
-                      "We appreciate Arshad Mahmood's attention to detail and Mureed Awan's responsiveness. Outstanding all around.",
+                      "We appreciate Arshad's attention to detail. Outstanding all around.",
                   },
                   {
                     name: "Maria Rodriguez",
@@ -522,7 +522,7 @@ export default function Index() {
                     platform: "Google Reviews",
                     location: "Melbourne, Australia",
                     review:
-                      "Kabir Awan's team went above and beyond. Their support helped us achieve goals sooner than expected.",
+                      "Kabir's team went above and beyond. Their support helped us achieve goals sooner than expected.",
                   },
                 ];
                 const list = [...base, ...base, ...base];
