@@ -143,10 +143,10 @@ export function Footer() {
               <div className="flex items-center gap-2 text-sm">
                 <Mail className="w-4 h-4 text-brand-teal" />
                 <a
-                  href="mailto:info@wellbeingfirstcare.com"
+                  href="mailto:info@wellbeingcare.com"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  info@wellbeingfirstcare.com
+                  info@wellbeingcare.com
                 </a>
               </div>
 
