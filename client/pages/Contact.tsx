@@ -108,7 +108,7 @@ export default function Contact() {
                     <h3 className="font-semibold text-brand-navy mb-1">
                       Email
                     </h3>
-                    <p className="text-gray-600">info@wellbeingfirstcare.com</p>
+                    <p className="text-gray-600">info@wellbeingcare.com</p>
                   </div>
                 </div>
 
@@ -288,7 +288,7 @@ export default function Contact() {
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white hover:text-brand-teal"
             >
-              <a href="mailto:info@wellbeingfirstcare.com">Send Email</a>
+              <a href="mailto:info@wellbeingcare.com">Send Email</a>
             </Button>
           </div>
         </div>
