@@ -71,7 +71,7 @@ export function Header() {
       {/* Top Bar */}
       <div className="bg-brand-teal text-white py-2 px-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-xs sm:text-sm">
-          <div className="flex items-center gap-2 whitespace-nowrap">
+          <div className="flex items-center gap-2 flex-wrap">
             <Phone className="w-4 h-4" />
             <a href="tel:+61451034940" className="hover:underline">
               +61 451 034 940
@@ -79,7 +79,7 @@ export function Header() {
             <span className="hidden sm:inline">|</span>
             <a
               href="tel:+61451185550"
-              className="hidden sm:inline hover:underline"
+              className="hover:underline"
             >
               +61 451 185 550
             </a>
