@@ -122,19 +122,19 @@ export function Footer() {
 
               <div className="flex items-center gap-2 text-sm">
                 <Phone className="w-4 h-4 text-brand-teal" />
-                <span className="text-gray-300">+61 451 034 940</span>
+                <a href="tel:+61451034940" className="text-gray-300 hover:text-white transition-colors">+61 451 034 940</a>
               </div>
 
               <div className="flex items-center gap-2 text-sm">
                 <Phone className="w-4 h-4 text-brand-teal" />
-                <span className="text-gray-300">+61 451 185 550</span>
+                <a href="tel:+61451185550" className="text-gray-300 hover:text-white transition-colors">+61 451 185 550</a>
               </div>
 
               <div className="flex items-center gap-2 text-sm">
                 <Mail className="w-4 h-4 text-brand-teal" />
-                <span className="text-gray-300">
+                <a href="mailto:info@wellbeingfirstcare.com" className="text-gray-300 hover:text-white transition-colors">
                   info@wellbeingfirstcare.com
-                </span>
+                </a>
               </div>
 
               {/* Social Media */}
