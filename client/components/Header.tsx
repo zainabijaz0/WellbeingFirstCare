@@ -82,7 +82,7 @@ export function Header() {
             </a>
           </div>
           <a
-            href="mailto:info@wellbeingfirstcare.com?subject=Enquiry&body=Hello%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20services."
+            href="mailto:info@wellbeingcare.com?subject=Enquiry&body=Hello%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20services."
             className="px-2 py-1 rounded-md bg-white/15 hover:bg-white/25 transition-colors inline-flex items-center gap-1"
           >
             <Mail className="w-3 h-3 sm:w-4 sm:h-4" />
