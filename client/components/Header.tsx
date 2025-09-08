@@ -70,9 +70,9 @@ export function Header() {
     <>
       {/* Top Bar */}
       <div className="bg-brand-teal text-white py-2 px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between text-xs sm:text-sm">
-          <div className="flex items-center gap-2 flex-wrap">
-            <Phone className="w-4 h-4" />
+        <div className="max-w-7xl mx-auto flex items-center justify-between text-[10px] sm:text-xs md:text-sm">
+          <div className="flex items-center gap-1 whitespace-nowrap">
+            <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
             <a href="tel:+61451034940" className="hover:underline">
               +61 451 034 940
             </a>
@@ -86,9 +86,9 @@ export function Header() {
           </div>
           <a
             href="tel:+61451034940"
-            className="px-2 py-1 rounded-md bg-white/15 hover:bg-white/25 transition-colors"
+            className="px-2 py-1 rounded-md bg-white/15 hover:bg-white/25 transition-colors inline-flex items-center gap-1"
           >
-            Call Now
+            <span className="hidden sm:inline">Call Now</span><span className="inline sm:hidden">Call</span>
           </a>
         </div>
       </div>
